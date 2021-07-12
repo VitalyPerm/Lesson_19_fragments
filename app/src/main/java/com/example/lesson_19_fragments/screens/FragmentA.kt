@@ -11,21 +11,20 @@ import com.example.lesson_19_fragments.utilits.APP_ACTIVITY
 
 
 class FragmentA : Fragment() {
-    private var _binding: FragmentABinding? = null
-    private val mBinding get() = _binding!!
+    private lateinit var bind: FragmentABinding
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentABinding.inflate(layoutInflater, container, false)
-        return mBinding.root
+        bind = FragmentABinding.inflate(layoutInflater, container, false)
+        return bind.root
     }
 
     override fun onStart() {
         super.onStart()
-        mBinding.btnAToB.setOnClickListener {
+        bind.btnAToB.setOnClickListener {
             APP_ACTIVITY.mNavController.navigate(R.id.action_fragmentA_to_fragmentB)
         }
     }
