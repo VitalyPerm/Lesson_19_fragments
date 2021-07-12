@@ -3,16 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentB">
-
+    tools:context=".screens.FragmentB">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="do"
+        android:text="Do"
+        android:textSize="50sp"
+        android:textColor="@color/black"
         android:layout_gravity="center|top"
         android:padding="50dp"
         android:layout_margin="50dp"
         />
+
+    <Button
+        android:id="@+id/btn_b_to_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:text="to A"
+        android:padding="50dp"
+        android:layout_margin="50dp"/>
+
+    <Button
+        android:id="@+id/btn_b_to_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:text="to C"
+        android:padding="50dp"
+        android:layout_margin="50dp"/>
 
 </FrameLayout>

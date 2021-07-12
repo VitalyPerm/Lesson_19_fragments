@@ -9,6 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="We"
+        android:textSize="50sp"
+        android:textColor="@color/black"
         android:layout_gravity="center|top"
         android:padding="50dp"
         android:layout_margin="50dp"
@@ -18,8 +20,17 @@
         android:id="@+id/btn_a_to_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
+        android:layout_gravity="left|bottom"
         android:text="to B"
+        android:padding="50dp"
+        android:layout_margin="50dp"/>
+
+    <Button
+        android:id="@+id/btn_a_to_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:text="to C"
         android:padding="50dp"
         android:layout_margin="50dp"/>
 

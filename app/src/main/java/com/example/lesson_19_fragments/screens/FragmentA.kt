@@ -27,6 +27,9 @@ class FragmentA : Fragment() {
         bind.btnAToB.setOnClickListener {
             APP_ACTIVITY.mNavController.navigate(R.id.action_fragmentA_to_fragmentB)
         }
+        bind.btnAToC.setOnClickListener {
+            APP_ACTIVITY.mNavController.navigate(R.id.action_fragmentA_to_fragmentC )
+        }
     }
 
 }
