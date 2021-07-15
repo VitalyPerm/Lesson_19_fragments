@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentA"
-        android:name="com.example.lesson_19_fragments.screens.FragmentA"
+        android:name="com.example.lesson_19_fragments.fragments.FragmentA"
         android:label="fragment_a"
         tools:layout="@layout/fragment_a" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentB"
-        android:name="com.example.lesson_19_fragments.screens.FragmentB"
+        android:name="com.example.lesson_19_fragments.fragments.FragmentB"
         android:label="fragment_b"
         tools:layout="@layout/fragment_b" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentC"
-        android:name="com.example.lesson_19_fragments.screens.FragmentC"
+        android:name="com.example.lesson_19_fragments.fragments.FragmentC"
         android:label="fragment_c"
         tools:layout="@layout/fragment_c" >
         <action
