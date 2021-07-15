@@ -40,16 +40,19 @@
         app:navGraph = "@navigation/navigation_graph"
         />
 
-    <fragment
-        android:id="@+id/fragment_container_c_landscape"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="amazing magic"
+        android:singleLine="true"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/fragment_container_b_landscape"
-        android:layout_width="230dp"
-        android:layout_height="0dp"
-        android:name="com.example.lesson_19_fragments.fragments.FragmentC"
-        app:navGraph = "@navigation/navigation_graph"
+        android:padding="20dp"
+        android:layout_margin="20dp"
         />
+
 
 
 

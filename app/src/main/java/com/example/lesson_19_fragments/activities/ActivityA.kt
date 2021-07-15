@@ -1,14 +1,16 @@
 package com.example.lesson_19_fragments.activities
 
-import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_USER_PORTRAIT
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import com.example.lesson_19_fragments.R
 import com.example.lesson_19_fragments.databinding.ActivityABinding
-import com.example.lesson_19_fragments.utilits.ACTIVITY_A
+import com.example.lesson_19_fragments.utilits.APP_ACTIVITY
+
 
 class ActivityA : AppCompatActivity() {
-
+    lateinit var navController: NavController
 
     private lateinit var bind: ActivityABinding
 
@@ -16,13 +18,12 @@ class ActivityA : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bind = ActivityABinding.inflate(layoutInflater)
         setContentView(bind.root)
-        ACTIVITY_A = this
+        APP_ACTIVITY = this
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment)
     }
-
 
 
 }
 
 
-//lateinit var mNavController : NavController
-//        mNavController = Navigation.findNavController(this, R.id.fragment_container_a)
+

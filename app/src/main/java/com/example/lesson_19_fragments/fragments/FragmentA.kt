@@ -1,6 +1,5 @@
 package com.example.lesson_19_fragments.fragments
 
-import android.content.Intent
 import android.content.res.Configuration.ORIENTATION_LANDSCAPE
 import android.os.Bundle
 import android.util.Log
@@ -8,10 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.lesson_19_fragments.activities.ActivityB
-import com.example.lesson_19_fragments.activities.ActivityC
+import com.example.lesson_19_fragments.R
 import com.example.lesson_19_fragments.databinding.FragmentABinding
-import com.example.lesson_19_fragments.utilits.ACTIVITY_A
+import com.example.lesson_19_fragments.utilits.APP_ACTIVITY
 
 private const val TAG = "FragmentA"
 class FragmentA : Fragment() {
@@ -37,32 +35,19 @@ class FragmentA : Fragment() {
 
     }
 
-
-
-
     override fun onStart() {
         super.onStart()
         bind.btnAToB.setOnClickListener {
-            val i = Intent(ACTIVITY_A, ActivityB::class.java)
-            startActivity(i)
+            APP_ACTIVITY.navController.navigate(R.id.action_fragmentA_to_fragmentB)
         }
         bind.btnAToC.setOnClickListener {
-            val i = Intent(ACTIVITY_A, ActivityC::class.java)
-            startActivity(i)
+            APP_ACTIVITY.navController.navigate(R.id.action_fragmentA_to_fragmentC)
         }
 
 
     }
-//    override fun onConfigurationChanged(newConfig: Configuration) {
-//        super.onConfigurationChanged(newConfig)
-//        Log.d(TAG, "Configuration changed called")
-//        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-//            bind.btnAToB.visibility = View.GONE
-//        }
-//    }
 
 
 }
 
 
-//ACTIVITY_A.mNavController.navigate(R.id.action_fragmentA_to_fragmentC )

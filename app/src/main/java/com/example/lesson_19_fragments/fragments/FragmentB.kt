@@ -1,17 +1,14 @@
 package com.example.lesson_19_fragments.fragments
 
-import android.app.Activity
-import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.lesson_19_fragments.activities.ActivityA
-import com.example.lesson_19_fragments.activities.ActivityC
+import com.example.lesson_19_fragments.R
 import com.example.lesson_19_fragments.databinding.FragmentBBinding
-import com.example.lesson_19_fragments.utilits.ACTIVITY_B
+import com.example.lesson_19_fragments.utilits.APP_ACTIVITY
 
 
 class FragmentB : Fragment() {
@@ -29,12 +26,10 @@ class FragmentB : Fragment() {
     override fun onStart() {
         super.onStart()
         bind.btnBToC.setOnClickListener {
-            val i = Intent(ACTIVITY_B, ActivityC::class.java)
-            startActivity(i)
+            APP_ACTIVITY.navController.navigate(R.id.action_fragmentB_to_fragmentC)
         }
         bind.btnBToA.setOnClickListener {
-            val i = Intent(ACTIVITY_B, ActivityA::class.java)
-            startActivity(i)
+            APP_ACTIVITY.navController.navigate(R.id.action_fragmentB_to_fragmentA)
         }
         bind.btnFinish.setOnClickListener {
             activity?.finishAffinity()
