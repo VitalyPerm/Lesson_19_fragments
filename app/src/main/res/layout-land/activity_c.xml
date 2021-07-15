@@ -47,7 +47,7 @@
         app:layout_constraintStart_toEndOf="@id/fragment_container_b_landscape"
         android:layout_width="230dp"
         android:layout_height="0dp"
-        android:name="com.example.lesson_19_fragments.fragments.FragmentCland"
+        android:name="com.example.lesson_19_fragments.fragments.FragmentC"
         app:navGraph = "@navigation/navigation_graph"
         />
 
